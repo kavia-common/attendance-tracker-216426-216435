@@ -1,0 +1,6 @@
+This multi-container workspace contains a Flutter project at:
+attendance-tracker-216426-216435/attendance_frontend
+
+CI Hint:
+- flutter analyze attendance-tracker-216426-216435/attendance_frontend
+- cd attendance-tracker-216426-216435/attendance_frontend && flutter analyze
