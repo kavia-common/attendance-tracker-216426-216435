@@ -1,0 +1,4 @@
+{
+    "command": "flutter pub get",
+    "working_directory": "/home/kavia/workspace/code-generation/attendance-tracker-216426-216435/attendance_frontend"
+}
