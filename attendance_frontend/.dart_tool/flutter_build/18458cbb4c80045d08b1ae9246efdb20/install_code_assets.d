@@ -1,0 +1,1 @@
+ /home/kavia/workspace/code-generation/attendance-tracker-216426-216435/attendance_frontend/.dart_tool/flutter_build/18458cbb4c80045d08b1ae9246efdb20/native_assets.json: 
