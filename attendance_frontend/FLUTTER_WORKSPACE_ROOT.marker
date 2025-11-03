@@ -1,2 +1,1 @@
-# Marker indicating this is the workspace-level Flutter project root.
-# CI can detect this file to confirm path for Flutter commands.
+Workspace root marker for Flutter tooling.

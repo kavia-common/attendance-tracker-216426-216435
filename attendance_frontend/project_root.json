@@ -1,7 +1,10 @@
 {
-  "project_type": "flutter",
-  "root": "attendance-tracker-216426-216435/attendance_frontend",
+  "type": "flutter",
+  "root": ".",
   "entrypoint": "lib/main.dart",
   "pubspec": "pubspec.yaml",
-  "notes": "Use this directory as the working directory for Flutter commands."
+  "android": "android",
+  "ios": "ios",
+  "web": "web",
+  "notes": "Run flutter commands from this directory."
 }

@@ -1,11 +1,10 @@
-This is the root of the Flutter app for the Attendance Frontend.
+Project Root: Flutter app (attendance_frontend)
 
-Path from repository root:
-attendance-tracker-216426-216435/attendance_frontend
+- Entrypoint: lib/main.dart
+- Pubspec: pubspec.yaml
+- Android: android/
+- iOS: ios/ (optional)
+- Web: web/ (optional)
+- Assets: assets/, .env
 
-Contains:
-- pubspec.yaml
-- lib/
-- android/
-- (optional) ios/, web/
-- .env (copy from .env.example)
+CI/tools should set the working directory to this folder before executing flutter commands.

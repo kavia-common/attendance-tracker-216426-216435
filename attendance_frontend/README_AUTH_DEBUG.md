@@ -35,9 +35,12 @@ If backend returns token but no user, the provider already fetches /users/me the
 
 Checklist before testing:
 - .env: MOCK_MODE=false, URLs correct.
+- Optional auth path overrides:
+  - AUTH_LOGIN_PATH=/auth/login
+  - AUTH_ME_PATHS=/users/me,/auth/me,/me
 - Backend responding:
-  - POST /auth/login returns JSON with 'token', 'access_token', 'accessToken', 'jwt', 'id_token', or nested under 'data', 'auth', or 'meta'.
-  - GET /users/me authorized with Bearer token returns user JSON: id, name, email, role.
+  - POST /auth/login returns JSON with one of: token, access_token, accessToken, jwt, id_token, idToken, bearer, bearer_token, api_token (also nested under data.*, auth.*, meta.*).
+  - GET /users/me (or fallback paths from AUTH_ME_PATHS) with Authorization: Bearer <token> returns user JSON: id, name, email, role.
   - WebSocket at REALTIME_URL accepts Authorization header. If not, SSE fallback at EVENTS_URL does.
 
 Troubleshooting scenarios:

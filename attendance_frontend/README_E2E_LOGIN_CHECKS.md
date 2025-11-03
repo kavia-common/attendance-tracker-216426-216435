@@ -1,30 +1,66 @@
-# E2E Login Checklist (Frontend + Backend)
+# E2E Login Checks
 
-Frontend (.env):
-- MOCK_MODE=false
-- API_BASE_URL=http://<host>:<port>
-- REALTIME_URL=ws://<host>:<port>/ws
-- EVENTS_URL=http://<host>:<port>/events
-- AUTH_LOGIN_PATH=/auth/login            # optional override
-- AUTH_ME_PATHS=/users/me,/auth/me,/me,/users/profile   # optional list (comma-separated)
+This guide helps you diagnose and validate the login flow end-to-end (frontend + backend).
 
-What the app does:
-- ApiClient logs POST /auth/login and response status/body preview in debug.
-- AuthProvider accepts token keys: token, access_token, accessToken, jwt, id_token; also in data.*, auth.*, meta.*.
-- If login contains no user, calls GET /users/me (fallback /auth/me).
-- Token persisted in SharedPreferences; session restored on app restart via loadSession().
-- RealtimeService connects to REALTIME_URL with Authorization: Bearer <token>. SSE fallback to EVENTS_URL.
+Prerequisites:
+- Backend running and reachable from the emulator/device.
+- A seeded test user with a bcrypt-hashed password.
+- Backend implements POST /auth/login and GET /users/me (or compatible endpoints).
 
-Backend prerequisites:
-- .env has JWT_SECRET and REFRESH_SECRET, DATABASE_URL set; Postgres reachable.
-- Ensure CORS allows the app origin (Android emulator uses 10.0.2.2).
-- POST /auth/login validates bcrypt and returns a JSON including a token (any key above is accepted). If you already return accessToken keep it.
-- GET /users/me returns authenticated user when Authorization: Bearer <token> is provided.
-- Seed a test user with bcrypt password matching your test creds, example:
-  email: teacher@example.com
-  password: password
+Environment (.env in attendance_frontend):
+API_BASE_URL=http://10.0.2.2:8000
+REALTIME_URL=ws://10.0.2.2:8000/ws
+EVENTS_URL=http://10.0.2.2:8000/events
+MOCK_MODE=false
+# Optional overrides when backend differs:
+# AUTH_LOGIN_PATH=/auth/login
+# AUTH_ME_PATHS=/users/me,/auth/me,/me
+
+How to run (from attendance_frontend directory):
+- flutter pub get
+- flutter run -d emulator
+
+What to capture in logs:
+- From ApiClient:
+  - "POST <API_BASE_URL>/auth/login body=<preview>"
+  - "RESPONSE POST <url> -> <status> headers={...} body=<preview>"
+- From AuthProvider:
+  - "AuthProvider.login -> POST /auth/login email=<email>"
+  - "AuthProvider.login <- response type=<runtimeType>"
+  - "AuthProvider.login: resolved token length=<N>"
+  - If user not in login response:
+    - "AuthProvider.login -> GET /users/me"
+    - "AuthProvider.login <- GET /users/me succeeded with user payload"
+- On app relaunch (session restore):
+  - "AuthProvider.loadSession -> GET <one-of AUTH_ME_PATHS>"
+  - "AuthProvider.loadSession <- GET <path> succeeded"
+
+Token field variants accepted by frontend:
+- Top-level or nested (data.*, auth.*, meta.*): token, access_token, accessToken, jwt, id_token, idToken, session_token, sessionToken, bearer, bearer_token, api_token
+
+Verification checklist:
+1) POST /auth/login returns 200 with one of the supported token fields (possibly nested).
+2) Frontend persists token to SharedPreferences (confirmed by logs and auto-login on relaunch).
+3) GET /users/me (or any path in AUTH_ME_PATHS) with Authorization: Bearer <token> returns user JSON (id, name, email, role).
+4) Realtime:
+   - WebSocket at REALTIME_URL accepts Authorization header; if not, SSE at EVENTS_URL should work.
+5) Backend:
+   - JWT secret consistent; /auth/login and /users/me verify the same secret.
+   - CORS configured if testing over web; not generally required for mobile.
+   - Bcrypt seeding for the test user.
 
 Troubleshooting:
-- Watch Flutter debug console for lines starting with: "POST ...", "RESPONSE ...", "ERROR ...", and "AuthProvider.login".
-- If 401 on /users/me after login, ensure the token is valid and Authorization header is accepted by backend.
-- If websocket fails, RealtimeService falls back to SSE; verify /events supports text/event-stream with JWT.
+- 401 on /auth/login:
+  - Check user credentials and bcrypt hashing; verify backend logs.
+- 200 on /auth/login but no token detected:
+  - Inspect response body; add your token field to AUTH_* or ensure it matches one of the supported names.
+- 200 with token but /users/me returns 401:
+  - Confirm Authorization header "Bearer <token>" is used on backend.
+  - Verify token format (JWT vs opaque) and backend validator.
+- Network errors:
+  - For Android emulators use 10.0.2.2 to reach host machine services.
+  - Ensure API_BASE_URL is correct and reachable.
+
+Notes:
+- Login/debug prints are enabled only in debug builds.
+- You can override login/me paths via AUTH_LOGIN_PATH and AUTH_ME_PATHS in .env.

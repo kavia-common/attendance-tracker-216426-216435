@@ -1,16 +1,13 @@
-CI Flutter Project Root Hint
+This is the Flutter project root for the attendance_frontend app.
 
-This file helps CI and analysis tools reliably locate the Flutter project root.
+Important paths:
+- Entrypoint: lib/main.dart
+- Pubspec: pubspec.yaml
+- Android: android/
+- Assets: assets/, .env
 
-Project root (relative to repository root):
-attendance-tracker-216426-216435/attendance_frontend
-
-Entrypoint:
-lib/main.dart
-
-Pubspec:
-pubspec.yaml
-
-Notes:
-- Always run Flutter commands from this directory.
-- If an analyzer runs from repo root, it must cd into the path above.
+Run Flutter commands from this directory:
+- flutter pub get
+- flutter analyze
+- flutter test
+- flutter run -d emulator

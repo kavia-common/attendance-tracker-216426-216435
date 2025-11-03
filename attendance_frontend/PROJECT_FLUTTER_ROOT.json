@@ -1,6 +1,9 @@
 {
-  "container": "attendance-tracker-216426-216435",
-  "flutter_project_root": "attendance-tracker-216426-216435/attendance_frontend",
-  "entry": "attendance-tracker-216426-216435/attendance_frontend/lib/main.dart",
-  "note": "Explicitly identifies the Flutter project root for CI discovery."
+  "project_root": ".",
+  "entrypoint": "lib/main.dart",
+  "pubspec": "pubspec.yaml",
+  "android_dir": "android",
+  "ios_dir": "ios",
+  "web_dir": "web",
+  "assets": ["assets", ".env"]
 }

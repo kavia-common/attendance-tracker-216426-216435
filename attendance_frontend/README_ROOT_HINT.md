@@ -1,5 +1,10 @@
-This directory is the Flutter project root for the mobile app.
-- Entry point: lib/main.dart
-- Pubspec: pubspec.yaml
-- Analysis options: analysis_options.yaml
-- Assets: assets/ and .env
+Run Flutter commands from this directory (Flutter project root).
+
+Typical commands:
+- flutter pub get
+- flutter analyze
+- flutter test
+- flutter run -d emulator
+
+Entrypoint: lib/main.dart
+pubspec: pubspec.yaml

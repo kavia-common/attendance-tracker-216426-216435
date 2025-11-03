@@ -1,14 +1,13 @@
-Analyzer Project Root
+This file helps CI and tooling detect the Flutter project root.
 
-Flutter project root (relative to repository root):
-attendance-tracker-216426-216435/attendance_frontend
+- Project root: this directory (contains pubspec.yaml).
+- Entry point: lib/main.dart
+- Android: android/
+- iOS: ios/ (if present)
+- Web: web/ (if present)
+- Assets: assets/, .env
 
-Entrypoint file:
-lib/main.dart
-
-Pubspec file:
-pubspec.yaml
-
-Notes:
-- Run `flutter pub get` and other flutter commands from this directory.
-- Tools should not treat the repository root as a Flutter project.
+Tools should run from this directory:
+- flutter pub get
+- flutter analyze
+- flutter test

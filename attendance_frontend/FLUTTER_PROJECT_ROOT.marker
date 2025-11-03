@@ -1,3 +1,2 @@
-. (Flutter project root)
-Entrypoint: lib/main.dart
-Pubspec: pubspec.yaml
+This file marks the root of a Flutter project for CI and tooling discovery.
+Contains: pubspec.yaml, lib/main.dart, android/, ios/ (optional), web/ (optional).
