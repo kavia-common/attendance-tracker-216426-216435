@@ -1,7 +1,7 @@
 {
-  "projectType": "flutter",
-  "root": ".",
-  "appName": "attendance_frontend",
-  "entry": "lib/main.dart",
-  "notes": "This file helps CI tools and scripts reliably detect the Flutter project root."
+  "project_type": "flutter",
+  "root": "attendance-tracker-216426-216435/attendance_frontend",
+  "entrypoint": "lib/main.dart",
+  "pubspec": "pubspec.yaml",
+  "notes": "Use this directory as the working directory for Flutter commands."
 }

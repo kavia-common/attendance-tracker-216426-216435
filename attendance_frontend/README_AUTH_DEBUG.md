@@ -11,6 +11,8 @@ This app already logs the following in debug mode (flutter run -d emulator):
   - "AuthProvider.login -> POST /auth/login email=<email>"
   - "AuthProvider.login <- response type=<runtimeType>"
   - "AuthProvider.login: resolved token length=<len>"
+  - Token keys accepted: token, access_token, accessToken, jwt, id_token, idToken, session_token, sessionToken (also nested under data.*, auth.*, meta.*)
+  - If user is missing from login response, AuthProvider automatically calls GET /users/me then falls back to GET /auth/me.
   - Session restore:
     - "AuthProvider.loadSession: session user loaded from /users/me or /auth/me"
 - RealtimeService:

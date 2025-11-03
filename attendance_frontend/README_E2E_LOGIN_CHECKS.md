@@ -5,6 +5,8 @@ Frontend (.env):
 - API_BASE_URL=http://<host>:<port>
 - REALTIME_URL=ws://<host>:<port>/ws
 - EVENTS_URL=http://<host>:<port>/events
+- AUTH_LOGIN_PATH=/auth/login            # optional override
+- AUTH_ME_PATHS=/users/me,/auth/me,/me,/users/profile   # optional list (comma-separated)
 
 What the app does:
 - ApiClient logs POST /auth/login and response status/body preview in debug.

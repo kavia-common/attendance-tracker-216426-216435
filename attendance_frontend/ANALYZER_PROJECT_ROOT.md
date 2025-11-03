@@ -1,9 +1,14 @@
-This file helps CI/mobile analyzers detect the Flutter project root.
+Analyzer Project Root
 
-Project root: .
-Entrypoint: lib/main.dart
-Pubspec: pubspec.yaml
+Flutter project root (relative to repository root):
+attendance-tracker-216426-216435/attendance_frontend
+
+Entrypoint file:
+lib/main.dart
+
+Pubspec file:
+pubspec.yaml
 
 Notes:
-- Ensure .env exists at project root (copy from .env.example) with MOCK_MODE=false and appropriate API_BASE_URL/REALTIME_URL/EVENTS_URL for E2E.
-- Assets include .env so Flutter can load it at runtime.
+- Run `flutter pub get` and other flutter commands from this directory.
+- Tools should not treat the repository root as a Flutter project.
