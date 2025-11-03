@@ -1,10 +1,5 @@
-This repository contains a Flutter project nested at:
-attendance-tracker-216426-216435/attendance_frontend
-
-CI runners should set the working directory to that path before running Flutter commands:
-  cd attendance-tracker-216426-216435/attendance_frontend
-  flutter pub get
-  flutter analyze
-  flutter test
-
-The entrypoint is lib/main.dart and pubspec.yaml is present in that folder.
+This directory is the Flutter project root for the mobile app.
+- Entry point: lib/main.dart
+- Pubspec: pubspec.yaml
+- Analysis options: analysis_options.yaml
+- Assets: assets/ and .env

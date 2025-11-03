@@ -1,3 +1,4 @@
-This directory is the Flutter project root for Attendance Frontend.
-pubspec: pubspec.yaml
-lib: lib/
+This file marks the Flutter project root for CI analyzers.
+Project root: .
+Entrypoint: lib/main.dart
+Pubspec: pubspec.yaml
