@@ -1,6 +1,50 @@
 # attendance_frontend
 
-A new Flutter project.
+Attendance Frontend (Flutter)
+
+## Environment configuration
+Create a `.env` file in this directory or use the provided `.env.example`:
+```
+API_BASE_URL=http://10.0.2.2:8000
+REALTIME_URL=ws://10.0.2.2:8000/ws
+EVENTS_URL=http://10.0.2.2:8000/events
+MOCK_MODE=false
+```
+
+- Set `MOCK_MODE=false` to use the real backend.
+- Ensure the URLs point to the running backend. On Android emulators, use `10.0.2.2` to reach the host machine.
+
+## Auth flow compatibility
+- Login POST: `/auth/login` with JSON `{ "email": "...", "password": "..." }`
+- Expected token fields supported: `token`, `access_token`, `jwt`, `id_token`.
+- Expected user field in response: `user` (or `data.user`).
+- If the login response returns only a token, the app will fetch the user from `/users/me` (and falls back to `/auth/me`).
+
+## Realtime
+- WebSocket connects to `REALTIME_URL` with `Authorization: Bearer <token>`.
+- SSE fallback uses `EVENTS_URL` with the same Authorization header.
+
+## Running in CI or locally with helper script
+From the repository root, you can use the helper script to ensure the correct working directory:
+```
+./run_flutter.sh get
+./run_flutter.sh analyze
+./run_flutter.sh test
+```
+
+## Quick backend verification (curl)
+```
+curl -i -X POST "$API_BASE_URL/auth/login" \
+  -H "Content-Type: application/json" \
+  -d '{"email":"teacher@example.com","password":"password"}'
+
+# After copying token:
+curl -i "$API_BASE_URL/users/me" -H "Authorization: Bearer <TOKEN>"
+# or fallback:
+curl -i "$API_BASE_URL/auth/me" -H "Authorization: Bearer <TOKEN>"
+```
+
+If you receive 401 on `/users/me` but `/auth/me` works (or vice versa), the app will handle the fallback automatically.
 
 ## Environment configuration
 

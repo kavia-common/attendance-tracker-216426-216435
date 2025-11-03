@@ -1,13 +1,5 @@
-Flutter CI instructions
+Analyzer instructions:
 
-The Flutter project root is at:
-attendance-tracker-216426-216435/attendance_frontend
-
-Before running Flutter commands, execute:
-- cd attendance-tracker-216426-216435/attendance_frontend
-
-Then run:
-- flutter pub get
-- flutter analyze
-- flutter test
-- flutter build apk
+- The Flutter project root is at attendance-tracker-216426-216435/attendance_frontend
+- The pubspec file is attendance-tracker-216426-216435/attendance_frontend/pubspec.yaml
+- Use that directory as working directory for flutter analyze/test/build

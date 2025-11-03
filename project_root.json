@@ -1,4 +1,6 @@
 {
-  "flutter_project_root": "attendance_frontend",
-  "notes": "Used by CI and tooling to cd into the Flutter project before running commands."
+  "type": "flutter-app",
+  "relative_app_path": "attendance-tracker-216426-216435/attendance_frontend",
+  "pubspec_path": "attendance-tracker-216426-216435/attendance_frontend/pubspec.yaml",
+  "notes": "Run flutter commands from the relative_app_path."
 }
