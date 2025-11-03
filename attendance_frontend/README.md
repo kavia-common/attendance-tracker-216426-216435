@@ -11,13 +11,13 @@ Project root
 Environment configuration
 Create a `.env` file here (or copy from `.env.example`) and set the backend endpoints.
 - For desktop:
-  API_BASE_URL=http://localhost:3010
-  REALTIME_URL=ws://localhost:3010/ws
-  EVENTS_URL=http://localhost:3010/events
+  API_BASE_URL=http://localhost:8000
+  REALTIME_URL=ws://localhost:8000/ws
+  EVENTS_URL=http://localhost:8000/events
 - For Android emulator:
-  API_BASE_URL=http://10.0.2.2:3010
-  REALTIME_URL=ws://10.0.2.2:3010/ws
-  EVENTS_URL=http://10.0.2.2:3010/events
+  API_BASE_URL=http://10.0.2.2:8000
+  REALTIME_URL=ws://10.0.2.2:8000/ws
+  EVENTS_URL=http://10.0.2.2:8000/events
 - Common:
   MOCK_MODE=false
 - Optional overrides:
@@ -56,6 +56,12 @@ curl -i -X POST "$API_BASE_URL/auth/login" \
 curl -i "$API_BASE_URL/users/me" -H "Authorization: Bearer <TOKEN>"
 # or fallback:
 curl -i "$API_BASE_URL/auth/me" -H "Authorization: Bearer <TOKEN>"
+
+References and Guides
+- DEVELOPMENT_RUN_GUIDE.md: avoid project root detection errors; correct run steps
+- BACKEND_LOGIN_CHECKLIST.md: align backend with frontend token/user shape and CORS
+- README_E2E_LOGIN_CHECKS.md: end-to-end login checks
+- README_AUTH_DEBUG.md: what debug logs to expect during auth
 
 CI and tooling notes
 - Ensure CI working directory is attendance-tracker-216426-216435/attendance_frontend.

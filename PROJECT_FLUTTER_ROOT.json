@@ -1,11 +1,11 @@
 {
-  "containers": [
+  "default_flutter_project": "attendance-tracker-216426-216435/attendance_frontend",
+  "projects": [
     {
       "name": "attendance_frontend",
       "path": "attendance-tracker-216426-216435/attendance_frontend",
-      "entry": "attendance-tracker-216426-216435/attendance_frontend/lib/main.dart",
-      "pubspec": "attendance-tracker-216426-216435/attendance_frontend/pubspec.yaml"
+      "pubspec": "attendance-tracker-216426-216435/attendance_frontend/pubspec.yaml",
+      "entrypoint": "attendance-tracker-216426-216435/attendance_frontend/lib/main.dart"
     }
-  ],
-  "hint": "CI/analyzers: cd into the 'path' before running Flutter commands."
+  ]
 }

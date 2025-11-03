@@ -1,0 +1,11 @@
+{
+  "default": "attendance-tracker-216426-216435/attendance_frontend",
+  "projects": [
+    {
+      "name": "attendance_frontend",
+      "path": "attendance-tracker-216426-216435/attendance_frontend",
+      "pubspec": "attendance-tracker-216426-216435/attendance_frontend/pubspec.yaml",
+      "entrypoint": "attendance-tracker-216426-216435/attendance_frontend/lib/main.dart"
+    }
+  ]
+}

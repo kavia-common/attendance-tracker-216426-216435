@@ -1,7 +1,17 @@
-CI Project Root Hint
+# CI Project Root Hint
 
-The actual Flutter application for the attendance frontend is located at:
+Primary Flutter project:
 attendance-tracker-216426-216435/attendance_frontend
 
-CI/analyzers should run Flutter commands within that directory.
-Do NOT attempt to run Flutter from the workspace root.
+Run commands with working directory set to that path, or use the helper script:
+./run_flutter.sh get
+./run_flutter.sh analyze
+./run_flutter.sh test
+./run_flutter.sh run -d emulator
+
+Markers present:
+- FLUTTER_WORKSPACE_ROOT.marker
+- PROJECT_FLUTTER_ROOT.json
+- ANALYZER_PROJECTS.json
+- FLUTTER_PROJECT_PATH
+- attendance_frontend/* project root markers

@@ -1,4 +1,3 @@
-# This repository contains a Flutter app at:
+# Workspace-level marker to help CI/analyzers locate Flutter project(s).
+# Primary Flutter project path:
 attendance-tracker-216426-216435/attendance_frontend
-
-# Tools should change directory into the path above before running Flutter commands.

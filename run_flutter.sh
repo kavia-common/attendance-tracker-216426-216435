@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-APP_DIR="attendance-tracker-216426-216435/attendance_frontend"
+PROJECT_DIR="attendance-tracker-216426-216435/attendance_frontend"
 
-if [ ! -f "$APP_DIR/pubspec.yaml" ]; then
-  echo "Error: Flutter pubspec.yaml not found in $APP_DIR"
+if [[ ! -d "$PROJECT_DIR" ]]; then
+  echo "Error: project directory not found: $PROJECT_DIR"
   exit 1
 fi
 
-cd "$APP_DIR"
+cd "$PROJECT_DIR"
 
-CMD="${1:-help}"
+cmd="${1:-help}"
+shift || true
 
-case "$CMD" in
+case "$cmd" in
   get)
     flutter pub get
     ;;
@@ -20,15 +21,16 @@ case "$CMD" in
     flutter analyze
     ;;
   test)
-    CI=true flutter test --concurrency=1
+    CI=true flutter test --coverage
     ;;
   run)
-    flutter run
+    flutter run "$@"
     ;;
   clean)
     flutter clean
     ;;
-  help|*)
-    echo "Usage: $0 [get|analyze|test|run|clean]"
+  *)
+    echo "Usage: $0 {get|analyze|test|run [args]|clean}"
+    exit 2
     ;;
 esac

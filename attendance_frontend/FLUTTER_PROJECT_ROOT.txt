@@ -1,1 +1,2 @@
-pubspec.yaml
+This directory is the Flutter project root.
+pubspec.yaml and lib/main.dart are present here.
