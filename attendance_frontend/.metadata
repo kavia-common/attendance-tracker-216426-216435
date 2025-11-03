@@ -1,7 +1,18 @@
 # This file tracks properties of this Flutter project.
-# This file should be version controlled and should not be manually edited.
+# It is used by Flutter tooling and some CI analyzers to detect the project root.
+# Safe to commit.
+
 version:
-  revision: "stable"
-  channel: "stable"
+  revision: unknown
+  channel: stable
 
 project_type: app
+
+migration:
+  platforms:
+    - android
+    - ios
+    - web
+    - macos
+    - linux
+    - windows
