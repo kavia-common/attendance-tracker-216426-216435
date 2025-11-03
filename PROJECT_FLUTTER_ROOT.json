@@ -1,0 +1,5 @@
+{
+  "flutter_project_root": "attendance-tracker-216426-216435/attendance_frontend",
+  "pubspec_path": "attendance-tracker-216426-216435/attendance_frontend/pubspec.yaml",
+  "note": "Tools should chdir to flutter_project_root before running Flutter commands."
+}

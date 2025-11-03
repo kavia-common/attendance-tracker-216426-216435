@@ -1,10 +1,7 @@
-If CI cannot detect the Flutter project root automatically, use this path:
+This is the Flutter project root for the mobile app.
 
-  attendance-tracker-216426-216435/attendance_frontend
-
-Run:
-- flutter analyze attendance-tracker-216426-216435/attendance_frontend
-- cd attendance-tracker-216426-216435/attendance_frontend && flutter analyze
-
-Artifacts:
-- FLUTTER_PROJECT_ROOT.marker exists in this directory to signal the root.
+Run toolchain commands from here:
+- flutter pub get
+- flutter analyze
+- flutter test
+- flutter build apk / flutter build ios
