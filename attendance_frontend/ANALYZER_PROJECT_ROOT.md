@@ -1,13 +1,24 @@
-This file helps CI and tooling detect the Flutter project root.
+# Analyzer Project Root Guidance
 
-- Project root: this directory (contains pubspec.yaml).
-- Entry point: lib/main.dart
+This is the Flutter app project root.
+
+- Entrypoint: lib/main.dart
+- Pubspec: pubspec.yaml
 - Android: android/
-- iOS: ios/ (if present)
-- Web: web/ (if present)
-- Assets: assets/, .env
+- Assets declared in pubspec: .env, assets/
 
-Tools should run from this directory:
+Tools and CI scripts must set the working directory to this folder before running Flutter commands like:
 - flutter pub get
 - flutter analyze
 - flutter test
+- flutter run
+
+Root markers present:
+- PROJECT_ROOT.marker
+- FLUTTER_PROJECT_ROOT.marker
+- PROJECT_ROOT.md
+- PROJECT_FLUTTER_ROOT.json
+- FLUTTER_PROJECT_ROOT.txt
+
+If your tool still "cannot determine project root", ensure the current working directory is:
+attendance-tracker-216426-216435/attendance_frontend

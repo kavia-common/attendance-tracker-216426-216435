@@ -1,13 +1,8 @@
-This is the Flutter project root for the attendance_frontend app.
+This directory is the Flutter project root for attendance_frontend.
 
-Important paths:
-- Entrypoint: lib/main.dart
-- Pubspec: pubspec.yaml
-- Android: android/
-- Assets: assets/, .env
-
-Run Flutter commands from this directory:
-- flutter pub get
-- flutter analyze
-- flutter test
-- flutter run -d emulator
+Machine-readable hints:
+- entrypoint: lib/main.dart
+- pubspec: pubspec.yaml
+- root: .
+- android: android
+- assets: .env, assets/

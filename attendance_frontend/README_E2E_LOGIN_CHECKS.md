@@ -8,13 +8,20 @@ Prerequisites:
 - Backend implements POST /auth/login and GET /users/me (or compatible endpoints).
 
 Environment (.env in attendance_frontend):
-API_BASE_URL=http://10.0.2.2:8000
-REALTIME_URL=ws://10.0.2.2:8000/ws
-EVENTS_URL=http://10.0.2.2:8000/events
+# Desktop
+# API_BASE_URL=http://localhost:3010
+# REALTIME_URL=ws://localhost:3010/ws
+# EVENTS_URL=http://localhost:3010/events
+
+# Android emulator
+API_BASE_URL=http://10.0.2.2:3010
+REALTIME_URL=ws://10.0.2.2:3010/ws
+EVENTS_URL=http://10.0.2.2:3010/events
+
 MOCK_MODE=false
 # Optional overrides when backend differs:
 # AUTH_LOGIN_PATH=/auth/login
-# AUTH_ME_PATHS=/users/me,/auth/me,/me
+# AUTH_ME_PATHS=/users/me,/auth/me,/me,/users/profile
 
 How to run (from attendance_frontend directory):
 - flutter pub get

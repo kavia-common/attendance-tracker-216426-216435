@@ -1,0 +1,4 @@
+This file marks the Flutter project root for CI/analyzers.
+Working directory for all Flutter commands should be this folder.
+Entrypoint: lib/main.dart
+Pubspec: pubspec.yaml
