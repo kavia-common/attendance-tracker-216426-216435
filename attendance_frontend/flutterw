@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Lightweight flutter wrapper to help CI infer project root.
+set -euo pipefail
+if ! command -v flutter >/dev/null 2>&1; then
+  echo "flutter not found in PATH" >&2
+  exit 127
+fi
+exec flutter "$@"

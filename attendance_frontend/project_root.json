@@ -1,7 +1,7 @@
 {
   "projectType": "flutter",
-  "root": "attendance-tracker-216426-216435/attendance_frontend",
-  "pubspec": "pubspec.yaml",
-  "lib": "lib",
-  "android": "android"
+  "root": ".",
+  "appName": "attendance_frontend",
+  "entry": "lib/main.dart",
+  "notes": "This file helps CI tools and scripts reliably detect the Flutter project root."
 }

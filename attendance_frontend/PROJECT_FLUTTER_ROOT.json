@@ -1,7 +1,6 @@
 {
-  "project": "attendance_frontend",
-  "is_flutter_project_root": true,
-  "pubspec": "pubspec.yaml",
-  "lib_dir": "lib",
-  "notes": "This is the Flutter app root."
+  "container": "attendance-tracker-216426-216435",
+  "flutter_project_root": "attendance-tracker-216426-216435/attendance_frontend",
+  "entry": "attendance-tracker-216426-216435/attendance_frontend/lib/main.dart",
+  "note": "Explicitly identifies the Flutter project root for CI discovery."
 }

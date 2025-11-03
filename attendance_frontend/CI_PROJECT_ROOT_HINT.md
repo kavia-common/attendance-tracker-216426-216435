@@ -1,6 +1,5 @@
-# CI Project Root Hint (App)
+This directory is the root of a Flutter project.
 
-This is the Flutter app root. Run Flutter commands from here.
-
-Relative path from workspace root:
-attendance-tracker-216426-216435/attendance_frontend
+- pubspec.yaml is present here.
+- The application entrypoint is lib/main.dart
+- Use this folder as the working directory for analysis/build.

@@ -1,5 +1,17 @@
-# Flutter tool metadata
+# This file is used by Flutter tools to track project metadata.
+# It is safe to commit to source control.
+
 version:
   revision: unknown
   channel: stable
+
 project_type: app
+
+migration:
+  platforms:
+    - android
+    - ios
+    - web
+    - linux
+    - macos
+    - windows

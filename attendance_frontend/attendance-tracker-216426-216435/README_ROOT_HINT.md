@@ -1,9 +1,12 @@
-If your CI reports "Could not determine project root directory for Flutter project", point the analyzer or build step to this directory:
+This workspace contains a Flutter app in the subfolder:
 
-  attendance-tracker-216426-216435/attendance_frontend
+- attendance_frontend/
 
-Examples:
-- flutter analyze attendance-tracker-216426-216435/attendance_frontend
-- cd attendance-tracker-216426-216435/attendance_frontend && flutter analyze
+Use that folder as the working directory for Flutter:
+  cd attendance_frontend
+  flutter pub get
+  flutter analyze
+  flutter test
+  flutter run
 
-This workspace is multi-container. Some CI environments need an explicit path to the Flutter app.
+pubspec.yaml and lib/main.dart live inside attendance_frontend/.
