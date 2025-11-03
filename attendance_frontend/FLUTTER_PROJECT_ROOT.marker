@@ -1,1 +1,3 @@
-attendance_frontend
+# This marker indicates the root of a Flutter project for tools/CI.
+# It should reside in the same directory as pubspec.yaml.
+# Working directory for all Flutter commands should be this folder.

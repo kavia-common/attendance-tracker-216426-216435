@@ -1,21 +1,5 @@
-# This file is used by tooling to determine if this directory is the root of a Flutter project.
-# Generated for CI root detection purposes.
-
+# Flutter tool metadata
 version:
   revision: unknown
   channel: stable
-
 project_type: app
-
-migration:
-  platforms:
-    - android
-    - ios
-    - linux
-    - macos
-    - web
-    - windows
-  unmanaged_files:
-    - lib/main.dart
-    - pubspec.yaml
-    - analysis_options.yaml

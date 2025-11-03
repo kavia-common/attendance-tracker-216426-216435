@@ -1,5 +1,12 @@
-{
-  "root": true,
-  "pubspec": "pubspec.yaml",
-  "note": "This directory is the Flutter project root."
-}
+# Marker file to help CI/tools detect the Flutter project root.
+# This file should reside at the root of the Flutter app (where pubspec.yaml lives).
+# Some tools require this file to reliably locate the project for analysis/build.
+#
+# Expected sibling files/directories:
+# - pubspec.yaml
+# - lib/
+# - android/
+# - (optional) ios/, web/, macos/, linux/, windows/
+#
+# If project detection still fails in CI, ensure commands run from:
+# attendance-tracker-216426-216435/attendance_frontend

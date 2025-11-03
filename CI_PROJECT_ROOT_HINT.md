@@ -1,5 +1,4 @@
 # CI Project Root Hint
 
-This repository contains multiple folders. The Flutter project to analyze/build/test is located at:
-
-attendance_frontend
+Flutter project root for mobile analysis/build:
+attendance-tracker-216426-216435/attendance_frontend
