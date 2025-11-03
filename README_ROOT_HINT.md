@@ -1,16 +1,11 @@
-Flutter workspace root
+This workspace contains a Flutter application under:
 
-Flutter project root is located at:
-- attendance-tracker-216426-216435/attendance_frontend
+attendance_frontend/
 
-Run all Flutter commands from that directory:
-- cd attendance-tracker-216426-216435/attendance_frontend
-- flutter pub get
-- flutter analyze
-- flutter test
-- flutter build apk
+Tooling and CI should change directory to attendance_frontend before running Flutter commands.
 
-Artifacts to verify:
-- FLUTTER_PROJECT_ROOT.marker inside attendance_frontend
-- pubspec.yaml inside attendance_frontend
-- lib/main.dart inside attendance_frontend
+Key files:
+- attendance_frontend/pubspec.yaml
+- attendance_frontend/lib/main.dart
+- attendance_frontend/FLUTTER_PROJECT_ROOT.marker
+- attendance_frontend/CI_PROJECT_ROOT_HINT.md

@@ -1,7 +1,9 @@
-# This is a pointer file for CI analyzers to locate the actual Flutter project.
-# Do not run flutter commands here; use the real project at:
-# attendance-tracker-216426-216435/attendance_frontend
-flutter:
-  plugin:
-    platforms: {}
-workspace_note: "Pointer pubspec; real project at attendance-tracker-216426-216435/attendance_frontend"
+# Proxy pubspec to help tools locate the real Flutter project.
+# Do not run flutter commands here. See CI_PROJECT_ROOT_HINT.md.
+name: attendance_workspace_root
+publish_to: 'none'
+environment:
+  sdk: ^3.7.0
+
+# The real Flutter app is at attendance_frontend/
+# Tools should cd into that directory and use its pubspec.yaml

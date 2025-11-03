@@ -1,20 +1,11 @@
-This is the Flutter project root for the mobile app.
+# Flutter Project Root
 
-Project metadata:
-- Name: attendance_frontend
-- Pubspec: pubspec.yaml
-- Entry: lib/main.dart
-- Android: android/
-- iOS: (not configured in this workspace)
-- Assets: assets/
+This directory is the root of the Flutter project.
+- pubspec.yaml is here
+- lib/main.dart is the entrypoint
 
-Run all Flutter commands from this directory:
+CI should cd into this directory before running any Flutter commands:
 - flutter pub get
 - flutter analyze
 - flutter test
-- flutter build apk
-
-Verification:
-- FLUTTER_PROJECT_ROOT.marker exists
-- pubspec.yaml exists
-- lib/main.dart exists
+- flutter run

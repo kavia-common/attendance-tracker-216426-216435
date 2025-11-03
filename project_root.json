@@ -1,0 +1,4 @@
+{
+  "flutter_project_root": "attendance_frontend",
+  "notes": "Used by CI and tooling to cd into the Flutter project before running commands."
+}

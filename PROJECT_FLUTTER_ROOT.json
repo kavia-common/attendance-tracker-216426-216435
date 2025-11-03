@@ -1,6 +1,5 @@
 {
-  "flutter_project_root": "attendance-tracker-216426-216435/attendance_frontend",
-  "pubspec_path": "attendance-tracker-216426-216435/attendance_frontend/pubspec.yaml",
-  "entry": "attendance-tracker-216426-216435/attendance_frontend/lib/main.dart",
-  "note": "CI systems can read this file at the workspace root to cd into flutter_project_root before running Flutter commands."
+  "root": "attendance_frontend",
+  "workspace": "attendance-tracker-216426-216435",
+  "notes": "This file explicitly declares the Flutter project directory for CI and analysis tooling."
 }
