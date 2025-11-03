@@ -1,4 +1,1 @@
-Flutter project root:
-- entrypoint: lib/main.dart
-- pubspec: pubspec.yaml
-Run commands from this directory.
+pubspec.yaml

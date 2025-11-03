@@ -5,5 +5,5 @@
   "android_dir": "android",
   "ios_dir": "ios",
   "web_dir": "web",
-  "assets": ["assets", ".env"]
+  "notes": "This JSON helps CI and tooling locate the Flutter project root and entrypoints."
 }

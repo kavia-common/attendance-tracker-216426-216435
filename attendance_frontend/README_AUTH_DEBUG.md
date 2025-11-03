@@ -21,7 +21,7 @@ This app already logs the following in debug mode (flutter run -d emulator):
   - "Connecting SSE to <url>"
 
 How to capture exact login response preview:
-1. Ensure .env has MOCK_MODE=false and API_BASE_URL/REALTIME_URL/EVENTS_URL pointing to backend (use http://localhost:3010 for desktop or http://10.0.2.2:3010 for Android emulator).
+1. Ensure .env has MOCK_MODE=false and API_BASE_URL/REALTIME_URL/EVENTS_URL pointing to backend (use http://localhost:8000 for desktop or http://10.0.2.2:8000 for Android emulator). Set AUTH_LOGIN_PATH if your backend uses a non-default route; set AUTH_ME_PATHS if /users/me is not available.
 2. Run the app in debug mode.
 3. Attempt login from the Login screen.
 4. Copy logs from stdout around:

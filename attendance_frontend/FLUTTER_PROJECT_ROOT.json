@@ -1,7 +1,6 @@
 {
-  "project_root": ".",
-  "entrypoint": "lib/main.dart",
-  "pubspec": "pubspec.yaml",
-  "android": "android",
-  "assets": [".env", "assets/"]
+  "pubspec_path": "./pubspec.yaml",
+  "entrypoint_path": "./lib/main.dart",
+  "android_path": "./android",
+  "root": "."
 }

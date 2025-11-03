@@ -1,2 +1,6 @@
-This file marks the root of a Flutter project for CI and tooling discovery.
-Contains: pubspec.yaml, lib/main.dart, android/, ios/ (optional), web/ (optional).
+This file marks the Flutter project root for CI and tooling discovery.
+Expected files relative to this directory:
+- pubspec.yaml
+- lib/main.dart
+- android/
+- (optional) ios/, web/
