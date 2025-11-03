@@ -1,5 +1,6 @@
 {
   "flutter_project_root": "attendance-tracker-216426-216435/attendance_frontend",
   "pubspec_path": "attendance-tracker-216426-216435/attendance_frontend/pubspec.yaml",
-  "note": "Tools should chdir to flutter_project_root before running Flutter commands."
+  "entry": "attendance-tracker-216426-216435/attendance_frontend/lib/main.dart",
+  "note": "CI systems can read this file at the workspace root to cd into flutter_project_root before running Flutter commands."
 }

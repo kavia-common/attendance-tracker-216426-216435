@@ -1,9 +1,12 @@
-Analyzer hint:
-This is the Flutter project root.
-pubspec.yaml is in this directory.
-```sh
-# Example CI step
-cd attendance-tracker-216426-216435/attendance_frontend
-flutter pub get
-flutter analyze
-```
+Analyzer hint: This directory is the Flutter project root.
+
+Use this directory for:
+- flutter pub get
+- flutter analyze
+- flutter test
+
+Paths:
+- Pubspec: pubspec.yaml
+- Entry: lib/main.dart
+- Android: android/
+- Assets: assets/

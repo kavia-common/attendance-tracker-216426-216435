@@ -1,7 +1,16 @@
-This workspace contains multiple directories. The Flutter project root for the mobile app is:
+Flutter workspace root
 
-attendance-tracker-216426-216435/attendance_frontend
+Flutter project root is located at:
+- attendance-tracker-216426-216435/attendance_frontend
 
-Run Flutter commands (flutter pub get, flutter run, etc.) from that directory.
+Run all Flutter commands from that directory:
+- cd attendance-tracker-216426-216435/attendance_frontend
+- flutter pub get
+- flutter analyze
+- flutter test
+- flutter build apk
 
-If your tooling requires a project root marker, point it to the path above.
+Artifacts to verify:
+- FLUTTER_PROJECT_ROOT.marker inside attendance_frontend
+- pubspec.yaml inside attendance_frontend
+- lib/main.dart inside attendance_frontend

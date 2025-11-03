@@ -1,0 +1,7 @@
+{
+  "root": ".",
+  "pubspec": "pubspec.yaml",
+  "entry": "lib/main.dart",
+  "platforms": ["android"],
+  "notes": "This file assists CI to locate the Flutter project root."
+}

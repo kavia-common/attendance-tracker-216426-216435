@@ -1,5 +1,6 @@
-Flutter project root (relative):
-attendance-tracker-216426-216435/attendance_frontend
+This workspace contains a Flutter project.
 
-Pubspec location:
-attendance-tracker-216426-216435/attendance_frontend/pubspec.yaml
+Flutter project root:
+- attendance-tracker-216426-216435/attendance_frontend
+
+CI systems should change directory into the Flutter project root before running Flutter commands.

@@ -1,0 +1,7 @@
+# This is a pointer file for CI analyzers to locate the actual Flutter project.
+# Do not run flutter commands here; use the real project at:
+# attendance-tracker-216426-216435/attendance_frontend
+flutter:
+  plugin:
+    platforms: {}
+workspace_note: "Pointer pubspec; real project at attendance-tracker-216426-216435/attendance_frontend"
