@@ -1,6 +1,5 @@
-# This file tracks properties of this Flutter project.
-# It is used by Flutter tooling and some CI analyzers to detect the project root.
-# Safe to commit.
+# This file is used by tooling to determine if this directory is the root of a Flutter project.
+# Generated for CI root detection purposes.
 
 version:
   revision: unknown
@@ -12,7 +11,11 @@ migration:
   platforms:
     - android
     - ios
-    - web
-    - macos
     - linux
+    - macos
+    - web
     - windows
+  unmanaged_files:
+    - lib/main.dart
+    - pubspec.yaml
+    - analysis_options.yaml
