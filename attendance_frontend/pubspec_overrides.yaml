@@ -1,3 +1,4 @@
 # This optional file can help certain tooling in monorepos.
 # It is safe to keep empty or provide local overrides if necessary.
-overrides: {}
+# Valid keys for pubspec_overrides.yaml are: dependency_overrides, resolution, workspace
+dependency_overrides: {}

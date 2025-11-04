@@ -1,10 +1,11 @@
-import 'package:attendance_frontend/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:attendance_frontend/main.dart';
 
 void main() {
   // Ensure test bindings are initialized
   TestWidgetsFlutterBinding.ensureInitialized();
+
   testWidgets('Root shows progress while initializing', (WidgetTester tester) async {
     await tester.pumpWidget(const AttendanceApp());
 
